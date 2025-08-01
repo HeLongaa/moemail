@@ -1,5 +1,4 @@
 import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
 import { auth } from "@/lib/auth"
 import { Shield, Mail, Clock } from "lucide-react"
 import { ActionButton } from "@/components/home/action-button"
