@@ -4,8 +4,8 @@ import Link from "next/link"
 export function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 py-6 max-w-4xl">
-        <div className="text-center space-y-3 text-sm text-muted-foreground">
+      <div className="container mx-auto px-4 py-3 max-w-4xl">
+        <div className="text-center space-y-2 text-sm text-muted-foreground">
           {/* 第一行 */}
           <div className="flex items-center justify-center gap-2 flex-wrap">
             <span>由</span>
