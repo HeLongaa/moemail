@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
 import { auth } from "@/lib/auth"
 import { Shield, Mail, Clock } from "lucide-react"
 import { ActionButton } from "@/components/home/action-button"
@@ -10,11 +11,11 @@ export default async function Home() {
   const session = await auth()
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 h-screen">
-      <div className="container mx-auto h-full px-4 lg:px-8 max-w-[1600px]">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex flex-col">
+      <div className="container mx-auto flex-1 px-4 lg:px-8 max-w-[1600px]">
         <Header />
-        <main className="h-full">
-          <div className="h-[calc(100vh-4rem)] flex flex-col items-center justify-center text-center px-4 relative">
+        <main className="flex-1">
+          <div className="min-h-[calc(100vh-8rem)] flex flex-col items-center justify-center text-center px-4 relative">
             <div className="absolute inset-0 -z-10 bg-grid-primary/5" />
             
             <div className="w-full max-w-3xl mx-auto space-y-12 py-8">
@@ -54,6 +55,7 @@ export default async function Home() {
           </div>
         </main>
       </div>
+      <Footer />
     </div>
   )
 }
