@@ -2,13 +2,13 @@ import { ThemeProvider } from "@/components/theme/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from "@/lib/utils"
 import type { Metadata, Viewport } from "next"
-import { zpix } from "./fonts"
+import { customFont } from "./fonts"
 import "./globals.css"
 import { Providers } from "./providers"
 import { FloatMenu } from "@/components/float-menu"
 
 export const metadata: Metadata = {
-  title: "MoeMail - 萌萌哒临时邮箱服务",
+  title: "Tmail-HeLong - 临时邮箱",
   description: "安全、快速、一次性的临时邮箱地址，保护您的隐私，远离垃圾邮件。支持即时收件，到期自动失效。",
   keywords: [
     "临时邮箱",
@@ -82,8 +82,8 @@ export default function RootLayout({
       </head>
       <body 
         className={cn(
-          zpix.variable,
-          "font-zpix min-h-screen antialiased",
+          customFont.variable,
+          "font-custom min-h-screen antialiased",
           "bg-background text-foreground",
           "transition-colors duration-300"
         )}
