@@ -11,38 +11,38 @@ export default async function Home() {
   const session = await auth()
 
   return (
-    <div className="h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex flex-col overflow-hidden">
+    <div className="h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex flex-col">
       <Header />
-      <div className="container mx-auto flex-1 px-4 lg:px-8 max-w-[1600px] pt-16 flex flex-col">
-        <main className="flex-1 flex flex-col">
-          <div className="flex-1 flex flex-col items-center justify-center text-center px-4 relative">
+      <div className="container mx-auto flex-1 px-4 lg:px-8 max-w-[1600px] pt-16 flex flex-col overflow-hidden">
+        <main className="flex-1 flex flex-col overflow-hidden">
+          <div className="flex-1 flex flex-col items-center justify-center text-center px-4 relative min-h-0">
             <div className="absolute inset-0 -z-10 bg-grid-primary/5" />
             
-            <div className="w-full max-w-3xl mx-auto space-y-8 py-4">
-              <div className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider">
+            <div className="w-full max-w-3xl mx-auto space-y-6 py-2 flex flex-col justify-center min-h-0">
+              <div className="space-y-3">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
                     TMail.HELONG.ONLINE
                   </span>
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 tracking-wide">
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 tracking-wide">
                   临时邮箱服务
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 sm:px-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 px-4 sm:px-0">
                 <FeatureCard
-                  icon={<Shield className="w-5 h-5" />}
+                  icon={<Shield className="w-4 h-4 sm:w-5 sm:h-5" />}
                   title="隐私保护"
                   description="保护您的真实邮箱地址"
                 />
                 <FeatureCard
-                  icon={<Mail className="w-5 h-5" />}
+                  icon={<Mail className="w-4 h-4 sm:w-5 sm:h-5" />}
                   title="即时收件"
                   description="实时接收邮件通知"
                 />
                 <FeatureCard
-                  icon={<Clock className="w-5 h-5" />}
+                  icon={<Clock className="w-4 h-4 sm:w-5 sm:h-5" />}
                   title="自动过期"
                   description="到期自动失效"
                 />
